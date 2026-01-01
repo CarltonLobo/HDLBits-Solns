@@ -1,0 +1,14 @@
+module top_module( 
+    input [99:0] in,
+    output [99:0] out
+);
+    
+    generate
+        genvar i;
+        for(i = 0; i<100; i++)begin: blook
+            assign out[i] = in[100 - i - 1];
+        end
+    endgenerate
+    
+
+endmodule
